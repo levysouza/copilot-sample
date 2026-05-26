@@ -8,6 +8,25 @@ This skill helps generate:
 - pull request titles
 - pull request descriptions
 
+Always analyze the current repository changes before generating any response.
+
+Use available workspace context, including:
+- staged changes
+- unstaged changes
+- git diff
+- modified files
+- renamed files
+- deleted files
+
+Never ask the user to paste the diff if changes are already available in the editor context.
+
+You must infer:
+
+- the main purpose of the change
+- affected modules
+- whether the change is a feature, fix, refactor, docs, test, or chore
+- possible breaking changes
+
 ---
 
 ## Commit Message Generation
@@ -28,6 +47,7 @@ Rules:
 - keep concise
 - max 72 characters
 - use imperative tense
+- focus on the main change
 
 ---
 
